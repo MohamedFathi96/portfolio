@@ -1,0 +1,107 @@
+/* ------------------------- Utility Classes ------------------------- */
+.shadow-dark {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.hidden {
+  display: none !important;
+}
+.main-container {
+  position: relative;
+  padding-left: 270px;
+}
+.top-element {
+  position: relative;
+  z-index: 10;
+}
+.positioned {
+  padding: 10px;
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  /* background-color: red; */
+}
+
+.section-m1 {
+  margin: 60px 0;
+}
+.section-p1 {
+  padding: 20px 80px 30px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-header {
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  line-height: 1.5;
+}
+.second-header {
+  font-size: clamp(1rem, 2vw + 1rem, 4rem);
+  line-height: 1.5;
+}
+.third-header {
+  font-size: clamp(0.6rem, 2vw + 0.6rem, 3rem);
+  line-height: 1.5;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 0.9rem 2.9rem;
+  letter-spacing: 2px;
+  /* margin-top: 60px; */
+  display: inline-block;
+  background-color: var(--skin-color);
+  border-radius: 40px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Design Border */
+.design-border::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-right: 3px solid var(--skin-color);
+  border-top: 3px solid var(--skin-color);
+}
+.design-border::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-left: 3px solid var(--skin-color);
+  border-bottom: 3px solid var(--skin-color);
+}
+/* Two lines */
+.two-lines::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--skin-color);
+}
+.two-lines::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background-color: var(--skin-color);
+  margin-top: 5px;
+}
