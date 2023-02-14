@@ -122,3 +122,16 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+// ------------------------------------ Send Mail ------------------------------------
+
+function sendEmail() {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "mohamedfathi9696@gmail.com",
+    Password: "mayoship9696",
+    To: "mohamedfathi4345@gmail.com",
+    From: document.getElementById("email").value,
+    Subject: document.getElementById("subject").value,
+    Body: document.getElementById("message").value,
+  }).then((message) => alert("Your Email Was Send..."));
+}

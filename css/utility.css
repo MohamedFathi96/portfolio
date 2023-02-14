@@ -55,7 +55,7 @@
   letter-spacing: 2px;
   /* margin-top: 60px; */
   display: inline-block;
-  background-color: var(--skin-color);
+  background-color: var(--light-red);
   border-radius: 40px;
   color: #fff;
   transition: transform 0.3s ease-in-out;
@@ -72,8 +72,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  border-right: 3px solid var(--skin-color);
-  border-top: 3px solid var(--skin-color);
+  border-right: 3px solid var(--light-red);
+  border-top: 3px solid var(--light-red);
 }
 .design-border::before {
   content: "";
@@ -82,8 +82,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  border-left: 3px solid var(--skin-color);
-  border-bottom: 3px solid var(--skin-color);
+  border-left: 3px solid var(--light-red);
+  border-bottom: 3px solid var(--light-red);
 }
 /* Two lines */
 .two-lines::before {
@@ -93,7 +93,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: var(--skin-color);
+  background-color: var(--light-red);
 }
 .two-lines::after {
   content: "";
@@ -102,6 +102,13 @@
   left: 0;
   width: 20px;
   height: 3px;
-  background-color: var(--skin-color);
+  background-color: var(--light-red);
   margin-top: 5px;
+}
+
+.txt-light {
+  color: var(--text-light);
+}
+.txt-dark {
+  color: var(--text-black);
 }
