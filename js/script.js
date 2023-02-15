@@ -1,3 +1,12 @@
+// Loader Script
+const loader = document.querySelector(".loader");
+window.addEventListener("load", () => {
+  loader.classList.add("fade-out");
+});
+loader.addEventListener("animationend", () => {
+  loader.classList.add("hidden");
+});
+
 const menuIcon = document.getElementById("menu-icon");
 const asideElem = document.querySelector(".aside");
 const navLinks = document.querySelectorAll("ul.nav a");
@@ -124,14 +133,14 @@ function animate() {
 animate();
 // ------------------------------------ Send Mail ------------------------------------
 
-function sendEmail() {
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "mohamedfathi9696@gmail.com",
-    Password: "mayoship9696",
-    To: "mohamedfathi4345@gmail.com",
-    From: document.getElementById("email").value,
-    Subject: document.getElementById("subject").value,
-    Body: document.getElementById("message").value,
-  }).then((message) => alert("Your Email Was Send..."));
-}
+// function sendEmail() {
+//   Email.send({
+//     Host: "smtp.gmail.com",
+//     Username: "mohamedfathi9696@gmail.com",
+//     Password: "mayoship9696",
+//     To: "mohamedfathi4345@gmail.com",
+//     From: document.getElementById("email").value,
+//     Subject: document.getElementById("subject").value,
+//     Body: document.getElementById("message").value,
+//   }).then((message) => alert("Your Email Was Send..."));
+// }

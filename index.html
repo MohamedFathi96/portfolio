@@ -9,10 +9,31 @@
     <link rel="shortcut icon" href="./images/online-resume.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/glider.css">
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://kit.fontawesome.com/a23fd51af5.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <div class="loader">
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+    </div>
 
     <!-- ========= Aside Stard ========= -->
     <div style="z-index: 20;" class="aside top-element">
@@ -210,6 +231,12 @@
       </section>
       <!-- ========= Main Content End ========= -->
     </div>
+    <script>
+      const loader = document.querySelector('.loader');
+      window.addEventListener('load', () => {
+        loader.classList.add('hidden');
+      })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/glider.min.js"></script>
     <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->

@@ -1,6 +1,8 @@
+@import url("./loader.css");
 @import url("./reset.css");
 @import url("./utility.css");
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+
 /* General style */
 :root {
   --bg-light: #fdf9ff;
