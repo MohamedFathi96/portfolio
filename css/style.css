@@ -51,7 +51,7 @@ div.aside {
   position: fixed;
   background-color: var(--bg-light);
   width: 270px;
-  top: 20px;
+  top: 0px;
   left: -270px;
   bottom: 0;
   font-family: "segoe ui", chopsic;
@@ -130,7 +130,7 @@ section#about-me {
   gap: 1.8rem;
   /* justify-content: space-between; */
   background-color: transparent;
-  height: 100vh;
+  min-height: 100vh;
   text-transform: capitalize;
 }
 section#about-me .txt {
@@ -146,6 +146,7 @@ section#portfolio {
   min-height: 100vh;
   text-transform: capitalize;
   color: var(--text-dark);
+  /* margin-block: 30px; */
 }
 section#portfolio h1 {
   position: relative;
@@ -171,7 +172,7 @@ section#portfolio .projects > * {
 /* ------------------------- Contact ------------------------- */
 
 section#contact {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -180,7 +181,7 @@ section#contact {
   text-transform: capitalize;
 }
 section#contact .second-header {
-  margin-top: -30px;
+  /* margin-top: -30px; */
   font-size: clamp(1rem, 2vw + 0.7rem, 3.7rem);
 }
 section#contact .contact-info {
@@ -188,12 +189,14 @@ section#contact .contact-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 section#contact .contact-info img {
   margin: 0 auto 20px;
 }
 section#contact .contact-item {
   flex-basis: calc(80% / 4);
+  flex-grow: 1;
 }
 section#contact form {
   display: flex;

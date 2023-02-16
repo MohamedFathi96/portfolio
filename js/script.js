@@ -13,7 +13,7 @@ const fadeObserver = new IntersectionObserver(
       element.classList.add("fade-in");
     });
   },
-  { threshold: 0.6 }
+  { threshold: 0.69 }
 );
 
 fadingElements.forEach((elem) => {
@@ -30,7 +30,6 @@ const navLinks = document.querySelectorAll("ul.nav a");
 let activeLink = document.querySelector("ul.nav .active");
 let isOpen = Boolean(menuIcon.dataset.isOpen);
 function menuTrigger() {
-  console.log("test");
   if (isOpen === true) {
     asideElem.style.left = "-270px";
     isOpen = false;
@@ -39,9 +38,16 @@ function menuTrigger() {
     isOpen = true;
   }
 }
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    asideElem.style.left = "-270px";
+    isOpen = false;
+  });
+});
 
 const gliders = document.querySelectorAll(".glider");
 window.addEventListener("load", function () {
+  if (window.innerWidth < 850) init(12);
   gliders.forEach((glider) => {
     new Glider(glider, {
       slidesToShow: 5,
@@ -80,7 +86,7 @@ var canvas = /** @type {HTMLCanvasElement} */ (
   document.getElementById("canvas1")
 );
 const ctx = canvas.getContext("2d");
-const particles = [];
+let particles = [];
 
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
@@ -120,12 +126,13 @@ class Particle {
   }
 }
 
-function init() {
-  for (let particleIndex = 0; particleIndex < 35; particleIndex++) {
+function init(size) {
+  particles = [];
+  for (let particleIndex = 0; particleIndex < size; particleIndex++) {
     particles.push(new Particle());
   }
 }
-init();
+init(30);
 
 function moveParticles() {
   for (let index = 0; index < particles.length; index++) {
@@ -147,6 +154,7 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
 // ------------------------- Send Mail-------------------------
 
 // function sendEmail() {
