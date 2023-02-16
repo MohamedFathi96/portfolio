@@ -144,7 +144,7 @@ section#about-me .two-lines {
   position: relative;
 }
 
-/* Portfolio Start */
+/* ------------------------- Portfolio ------------------------- */
 section#portfolio {
   min-height: 100vh;
   text-transform: capitalize;
@@ -166,6 +166,9 @@ section#portfolio h2 {
 section#portfolio .projects > * {
   border-radius: 20px;
   max-width: 350px;
+  padding: 3px;
+  border: 1px solid rgb(87, 74, 209);
+  box-shadow: 0 5px 20px rgba(48, 46, 77, 0.5);
 }
 
 /* ------------------------- Contact ------------------------- */
