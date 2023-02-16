@@ -1,3 +1,5 @@
+// ---------------------------- fading animation ----------------------------
+
 const fadingElements = document.querySelectorAll(".fade");
 
 const fadeObserver = new IntersectionObserver(
@@ -54,8 +56,8 @@ window.addEventListener("load", function () {
     });
   });
 });
-// Typing animation
 
+// ---------------------------- Typing animation ----------------------------
 var typed = new Typed(".typing", {
   // Waits 1000ms after typing "First"
   strings: ["Full Stack Developer.", "Free Lancer."],
@@ -73,7 +75,7 @@ navLinks.forEach((linkElem) => {
     activeLink.classList.add("active");
   });
 });
-// ========= Canvas =========
+// ---------------------------- Canvas ----------------------------
 var canvas = /** @type {HTMLCanvasElement} */ (
   document.getElementById("canvas1")
 );
@@ -100,12 +102,12 @@ class Particle {
     this.y = Math.random() * canvas.height + 1;
     this.speedX = Math.random() * 3 - 1;
     this.speedY = Math.random() * 3 - 1;
-    this.size = Math.random() * 80 + 1;
+    this.size = Math.random() * 16 + 1;
   }
   update() {
     if (this.x < 0 || this.x > window.innerWidth)
       this.x = Math.random() * canvas.width + 1;
-    if (this.y < 0 || this.y > window.innerHeight)
+    else if (this.y < 0 || this.y > window.innerHeight)
       this.y = Math.random() * canvas.height + 1;
     this.x += this.speedX;
     this.y += this.speedY;
@@ -119,7 +121,7 @@ class Particle {
 }
 
 function init() {
-  for (let particleIndex = 0; particleIndex < 8; particleIndex++) {
+  for (let particleIndex = 0; particleIndex < 35; particleIndex++) {
     particles.push(new Particle());
   }
 }
@@ -159,4 +161,8 @@ animate();
 //   }).then((message) => alert("Your Email Was Send..."));
 // }
 
-// ------------------------- IntersectionObservers-------------------------
+// ------------------------- Change font color -------------------------
+const rootNode = document.querySelector(":root");
+function changeFontColor() {
+  rootNode.style.setProperty("--text-dark", "#fff");
+}

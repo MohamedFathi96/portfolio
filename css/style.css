@@ -13,12 +13,13 @@
   --text-light: #b6eada;
   --text-dark: #03001c;
   --text-accent-1: #301e67;
-  --text-accent-2: #5b8fb9;
+  --text-accent-2: #301e67;
   --light-red: #ec1839;
 }
 
 #canvas1 {
   position: fixed;
+  /* background-color: #000; */
   top: 0;
   left: 0;
   z-index: 1;
@@ -94,7 +95,7 @@ ul.nav li a.active {
 
 /* =====================Home Start===================== */
 #home {
-  background: transparent url("./../images/background2.png") no-repeat 100% 100%;
+  background: transparent url("./../images/background.png") no-repeat 100% 100%;
   background-size: contain;
   text-transform: capitalize;
   min-height: 100vh;
@@ -233,6 +234,14 @@ section#contact form > button:hover {
   section#contact {
     justify-content: space-around;
   }
+  section#portfolio .projects > * {
+    max-width: 450px;
+  }
+}
+@media (min-width: 1750px) {
+  section#portfolio .projects > * {
+    max-width: 450px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -250,34 +259,5 @@ section#contact form > button:hover {
   }
   .main-container {
     padding-left: 0px;
-  }
-}
-
-@media (max-width: 1158px) {
-  .about .about-content .personal-info {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .about .about-content .skills {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-@media (max-width: 871px) {
-  .about .about-content .personal-info .info-item,
-  .about .about-content .personal-info .info-item2 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    /* background-color: red; */
-  }
-  .about .about-content .personal-info .buttons {
-    text-align: center;
-  }
-}
-
-@media (max-width: 1000px) {
-  .about .about-content .education {
-    flex: 0 0 100%;
-    max-width: 100%;
   }
 }
