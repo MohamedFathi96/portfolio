@@ -1,10 +1,25 @@
-// Loader Script
-const loader = document.querySelector(".loader");
-window.addEventListener("load", () => {
-  loader.classList.add("fade-out");
-});
-loader.addEventListener("animationend", () => {
-  loader.classList.add("hidden");
+const fadingElements = document.querySelectorAll(".fade");
+
+const fadeObserver = new IntersectionObserver(
+  (entries, fadeObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        entry.target.style.opacity = 0;
+        return;
+      }
+      let element = entry.target;
+      element.classList.add("fade-in");
+    });
+  },
+  { threshold: 0.6 }
+);
+
+fadingElements.forEach((elem) => {
+  fadeObserver.observe(elem);
+  elem.addEventListener("animationend", () => {
+    elem.classList.remove("fade-in");
+    elem.style.opacity = 1;
+  });
 });
 
 const menuIcon = document.getElementById("menu-icon");
@@ -12,7 +27,6 @@ const asideElem = document.querySelector(".aside");
 const navLinks = document.querySelectorAll("ul.nav a");
 let activeLink = document.querySelector("ul.nav .active");
 let isOpen = Boolean(menuIcon.dataset.isOpen);
-
 function menuTrigger() {
   console.log("test");
   if (isOpen === true) {
@@ -131,7 +145,7 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
-// ------------------------------------ Send Mail ------------------------------------
+// ------------------------- Send Mail-------------------------
 
 // function sendEmail() {
 //   Email.send({
@@ -144,3 +158,5 @@ animate();
 //     Body: document.getElementById("message").value,
 //   }).then((message) => alert("Your Email Was Send..."));
 // }
+
+// ------------------------- IntersectionObservers-------------------------

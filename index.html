@@ -62,34 +62,33 @@
     <!-- ========= Aside End ========= -->
 
 
+    <canvas id="canvas1"></canvas>
     <div class="main-container">
-      <canvas id="canvas1"></canvas>
-      <!-- ========= Home Section Start ========= -->
-      <section class="home top-element">
-        <div class="container">
-          <div class="row">
-            <div class="home-info padd-15 ">
-              <h3 class="hello main-header">
-                Hello, my name is <span class="name second-header">Mohamed Fathi</span>
-              </h3>
-              <h3 class="my-profession">
-                I'm a <span class="typing"></span>
-              </h3>
-              <p>
-                I'm a developer with extensive experience for over 2 years. My
-                experience is to create a full website front-end and back-end
-              </p>
-              <a href="#contact" class="btn btn-hire-me">Hire Me</a>
-              <a href="#" class="btn btn-hire-me">Download CV</a>
-            </div>
 
-          </div>
+      <!-- ========= Home Section Start ========= -->
+      <section id="home" class="observe section-p1 top-element">
+
+        <h1 class="main-header">Hello, my name is</h1>
+        <h2 class="name txt-accent second-header">Mohamed Fathi</h2>
+        <h3 class="third-header my-profession">
+          I'm a <span class="txt-accent typing"></span>
+        </h3>
+
+        <p>
+          I am a self-employed, self-motivated, and self-taught developer who is passionate about full stack web
+          development and
+          figuring out solutions to improve myself in daily basis.
+        </p>
+        <a href="#contact" class="btn btn-hire-me">Hire Me</a>
+        <a href="./documents/cv.pdf" class="btn btn-hire-me">Download CV</a>
+        <!-- <button class="btn btn-hire-me" type="download">Download CV</button> -->
+
       </section>
 
       <!-- ========= About Section Start ========= -->
-      <section id="about-me" class="section-p1 top-element">
+      <section id="about-me" class="observe section-p1 top-element">
         <h1 class="second-header two-lines">About Me</h1>
-        <h1>I'm Mohamed Fathi A Web Developer</h1>
+        <h1>More About Me</h1>
         <h3 class="txt">Hard-working individual with
           experience in web Development
           Passionate about learning
@@ -139,51 +138,16 @@
 
       <!-- ========= Portfolio Section Start ========= -->
 
-      <section id="portfolio" class="portfolio section-p1 top-element">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Portfolio</h2>
-              <p>My last projects :</p>
-            </div>
-            <div class="row">
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner">
-                  <img src="images/free-vector-tri-fold-brochure.jpg" alt="borchure">
-                </div>
-              </div>
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner">
-                  <img src="images/free-vector-tri-fold-brochure.jpg" alt="borchure">
-
-                </div>
-              </div>
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner">
-                  <img src="images/free-vector-tri-fold-brochure.jpg" alt="borchure">
-
-                </div>
-              </div>
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner">
-                  <img src="images/free-vector-tri-fold-brochure.jpg" alt="borchure">
-
-                </div>
-              </div>
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner">
-                  <img src="images/free-vector-tri-fold-brochure.jpg" alt="borchure">
-
-                </div>
-              </div>
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner">
-                  <img src="images/free-vector-tri-fold-brochure.jpg" alt="borchure">
-
-                </div>
-              </div>
-            </div>
-          </div>
+      <section id="portfolio" class="observe section-p1 top-element">
+        <h1 class="main-header two-lines">Portfolio</h1>
+        <h2 class="second-header">My last projects:</h2>
+        <div class="projects">
+          <img class="fade" src="./images/sample.jpg" alt="prject">
+          <img class="fade" src="./images/sample.jpg" alt="prject">
+          <img class="fade" src="./images/sample.jpg" alt="prject">
+          <img class="fade" src="./images/sample.jpg" alt="prject">
+          <img class="fade" src="./images/sample.jpg" alt="prject">
+          <img class="fade" src="./images/sample.jpg" alt="prject">
         </div>
       </section>
 
@@ -192,7 +156,7 @@
 
       <!-- ========= Contact Section Start ========= -->
 
-      <section id="contact" class="section-p1 top-element txt-dark">
+      <section id="contact" class="observe section-p1 top-element txt-dark">
         <h1 class="main-header">Contact Me</h1>
         <div class="questions ">
           <h2 class="second-header">Do You Have any questions<span class="question-mark">?</span></h2>
@@ -232,10 +196,13 @@
       <!-- ========= Main Content End ========= -->
     </div>
     <script>
-      const loader = document.querySelector('.loader');
-      window.addEventListener('load', () => {
-        loader.classList.add('hidden');
-      })
+      const loader = document.querySelector(".loader");
+      window.addEventListener("load", () => {
+        loader.classList.add("loader-fade");
+      });
+      loader.addEventListener("transitionend", () => {
+        loader.classList.add("hidden");
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/glider.min.js"></script>

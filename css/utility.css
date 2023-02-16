@@ -1,4 +1,20 @@
 /* ------------------------- Utility Classes ------------------------- */
+.fade {
+  opacity: 0;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0.5 0.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1 1;
+  }
+}
+.fade-in {
+  animation: fadeIn 500ms ease-in 100ms both;
+}
 .shadow-dark {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
@@ -37,15 +53,15 @@
   flex-wrap: wrap;
 }
 .main-header {
-  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  font-size: clamp(1.3rem, 3vw + 1rem, 4rem);
   line-height: 1.5;
 }
 .second-header {
-  font-size: clamp(1rem, 2vw + 1rem, 4rem);
+  font-size: clamp(1.2rem, 2vw + 1rem, 4rem);
   line-height: 1.5;
 }
 .third-header {
-  font-size: clamp(0.6rem, 2vw + 0.6rem, 3rem);
+  font-size: clamp(1rem, 2vw + 0.3rem, 3rem);
   line-height: 1.5;
 }
 
@@ -53,11 +69,9 @@
   font-size: 1.5rem;
   padding: 0.9rem 2.9rem;
   letter-spacing: 2px;
-  /* margin-top: 60px; */
-  display: inline-block;
   background-color: var(--light-red);
   border-radius: 40px;
-  color: #fff;
+  color: var(--text-light);
   transition: transform 0.3s ease-in-out;
 }
 .btn:hover {
@@ -112,14 +126,11 @@
 .txt-dark {
   color: var(--text-black);
 }
-.fade-out {
-  animation: fade-out 500ms forwards;
+.txt-accent {
+  color: var(--light-red);
 }
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+
+.loader-fade {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }
