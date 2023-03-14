@@ -50,6 +50,8 @@
 div.aside {
   position: fixed;
   background-color: var(--bg-light);
+  border-top-right-radius: 26px;
+  border-bottom-right-radius: 26px;
   width: 270px;
   top: 0px;
   left: -270px;
@@ -167,6 +169,10 @@ section#portfolio .projects > * {
   padding: 3px;
   border: 1px solid rgb(87, 74, 209);
   box-shadow: 0 5px 20px rgba(48, 46, 77, 0.5);
+}
+section#portfolio .projects > * img {
+  height: 100%;
+  border-radius: inherit;
 }
 
 /* ------------------------- Contact ------------------------- */

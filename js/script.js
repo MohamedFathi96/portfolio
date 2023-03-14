@@ -132,7 +132,7 @@ function init(size) {
     particles.push(new Particle());
   }
 }
-init(30);
+init(20);
 
 function moveParticles() {
   for (let index = 0; index < particles.length; index++) {
