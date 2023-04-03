@@ -49,9 +49,10 @@
 
 div.aside {
   position: fixed;
-  background-color: var(--bg-light);
+  background-color: #131432;
   border-top-right-radius: 26px;
   border-bottom-right-radius: 26px;
+  filter: drop-shadow(2px 0px 5px #ff0);
   width: 270px;
   top: 0px;
   left: -270px;
