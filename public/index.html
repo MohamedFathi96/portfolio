@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="./images/online-resume.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/glider.min.css">
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+      <div class="circle">
+      </div>
+    </div>
+
+    <!-- ========= Aside Stard ========= -->
+    <div style="z-index: 20;" class="aside top-element">
+      <div id="menu-icon" data-isOpen="false" onclick="menuTrigger();" class="menu-icon">
+        <img src="./images/menu.png" alt="menu">
+      </div>
+      <div class="logo">
+        <a href="#"><img src="./images/logo.png" alt="logo"></a>
+      </div>
+      <ul class="nav">
+        <li>
+          <a class="active" href="#"><img src="./images/home.png" alt="home icon">home</a>
+        </li>
+        <li>
+          <a href="#about-me"><img src="./images/user.png" alt="home icon">about</a>
+        </li>
+
+        <li>
+          <a href="#portfolio"><img src="./images/portfolio.png" alt="home icon">portfolio</a>
+        </li>
+        <li>
+          <a href="#contact"><img src="./images/contact.png" alt="home icon">contacts</a>
+        </li>
+      </ul>
+    </div>
+    <!-- ========= Aside End ========= -->
+
+
+    <canvas id="canvas1"></canvas>
+    <div class="main-container">
+
+      <!-- ========= Home Section Start ========= -->
+      <section id="home" class="observe section-p1 top-element">
+
+        <h1 class="main-header">Hello, my name is</h1>
+        <h2 class="name txt-accent second-header">Mohamed Fathi</h2>
+        <h3 class="third-header my-profession">
+          I'm a <span class="txt-accent typing"></span>
+        </h3>
+
+        <p class="fade">
+          I am a self-employed, self-motivated, and self-taught developer who is passionate about full stack web
+          development and
+          figuring out solutions to improve myself in daily basis.
+        </p>
+        <a href="#contact" class="btn btn-hire-me">Hire Me</a>
+        <a href="./documents/cv.pdf" class="btn btn-hire-me">Download CV</a>
+        <!-- <button class="btn btn-hire-me" type="download">Download CV</button> -->
+
+      </section>
+
+      <!-- ========= About Section Start ========= -->
+      <section id="about-me" class="observe section-p1 top-element">
+        <h1 class="second-header two-lines">About Me</h1>
+        <h1>More About Me</h1>
+        <h3 class="txt">Hard-working individual with
+          experience in web Development
+          Passionate about learning
+          and development with a desire
+          to apply skills on a larger
+          development team.Eager to tackle
+          more complex problems and
+          continue to find ways to maximize
+          user efficiency.</h3>
+        <h1><span class="positioned design-border">Front-end</span></h1>
+        <div class="glider-contain fade">
+          <div class="glider">
+            <div><img src="./images/skills/css.png" alt="skills icon"></div>
+            <div><img src="./images/skills/js.png" alt="skills icon"></div>
+            <div><img src="./images/skills/atom.png" alt="skills icon"></div>
+            <div><img src="./images/skills/bootstrap.png" alt="skills icon"></div>
+            <div><img src="./images/skills/jqery.png" alt="skills icon"></div>
+            <div><img src="./images/skills/wordpress.png" alt="skills icon"></div>
+            <div><img src="./images/skills/git.png" alt="skills icon"></div>
+            <div><img src="./images/skills/photoshop 1.png" alt="skills icon"></div>
+            <div><img src="./images/skills/html-5.png" alt="skills icon"></div>
+            <div><img src="./images/skills/figma.png" alt="skills icon"></div>
+          </div>
+
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <button aria-label="Next" class="glider-next">»</button>
+          <div role="tablist" class="dots"></div>
+        </div>
+        <h1><span class="positioned design-border">Back-end</span></h1>
+        <div class="glider-contain fade">
+          <div class="glider">
+            <div><img src="./images/skills/nodejs 1.png" alt="skills icon"></div>
+            <div><img src="./images/skills/express.png" alt="skills icon"></div>
+            <div><img src="./images/skills/mangodb.png" alt="skills icon"></div>
+            <div><img src="./images/skills/mysql.png" alt="skills icon"></div>
+            <div><img src="./images/skills/restapi.png" alt="skills icon"></div>
+            <div><img src="./images/skills/sql.png" alt="skills icon"></div>
+          </div>
+
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <button aria-label="Next" class="glider-next">»</button>
+          <div role="tablist" class="dots"></div>
+        </div>
+      </section>
+
+
+
+      <!-- ========= Portfolio Section Start ========= -->
+
+      <section id="portfolio" class="observe section-p1 top-element">
+        <h1 class="main-header two-lines">Portfolio</h1>
+        <h2 class="second-header">My last projects:</h2>
+        <div class="projects">
+          <a class="fade" href="https://ramzy.tech/" target="_blank">
+            <img src="./images/ramzytech.jpg" alt="prject">
+          </a>
+          <a class="fade" href="https://blogerui.web.app/" target="_blank">
+            <img src="./images/blogclub.jpg" alt="prject">
+          </a>
+          <a class="fade" href="https://developer-e5a42.web.app/" target="_blank">
+            <img src="./images/developers.jpg">
+          </a>
+          <a class="fade" href="https://brandistic-7ed41.web.app/" target="_blank">
+            <img src="./images/ecommerce.jpg" alt="prject">
+          </a>
+          <a class="fade" href="https://memory-game-c98ba.web.app/" target="_blank">
+            <img src="./images/memory.jpg" alt="prject">
+          </a>
+          <a class="fade" href="https://brandistic-design.netlify.app/" target="_blank">
+            <img src="./images/fittness.jpg" alt="prject">
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ========= Portfolio Section End ========= -->
+
+
+      <!-- ========= Contact Section Start ========= -->
+
+      <section id="contact" class="observe section-p1 top-element txt-dark">
+        <h1 class="main-header">Contact Me</h1>
+
+        <h2 class="second-header">Do You Have any questions<span class="question-mark">?</span></h2>
+        <p class="third-header">i'm at your service</p>
+
+        <div class="contact-info">
+          <div class="fade contact-item">
+            <img src="./images/telephone.png" alt="icon">
+            <p>Call me on</p>
+            <p>01151786617</p>
+          </div>
+          <div class="fade contact-item">
+            <img src="./images/location.png" alt="icon">
+            <p>Location</p>
+            <p>El-Mokatem,Street 9</p>
+          </div>
+
+          <div class="fade contact-item">
+            <img src="./images/earth.png" alt="icon">
+            <p>Website</p>
+            <p><a href="https://mohamedfathi96.github.io/">github domain</a></p>
+          </div>
+          <div class="fade contact-item">
+            <img src="./images/@.png" alt="icon">
+            <p>Email</p>
+            <p>mohamedfathi4345@gmail.com</p>
+            <p>mohamedfathi9696@gmail.com</p>
+          </div>
+        </div>
+        <form class="fade" action="#">
+          <input class="half-width" placeholder="NAME" type="text">
+          <input id="email" class="half-width" placeholder="EMAIL" type="email">
+          <input id="subject" placeholder="Subject" type="text">
+          <textarea placeholder="MESSAGE" name="message" id=message" cols="30" rows="10"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      <!-- ========= Main Content End ========= -->
+    </div>
+    <script>
+      const loader = document.querySelector(".loader");
+      window.addEventListener("load", () => {
+        loader.classList.add("loader-fade");
+      });
+      loader.addEventListener("transitionend", () => {
+        loader.classList.add("hidden");
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/glider.min.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script defer src="js/script.js"></script>
+  </body>
+
+</html>
